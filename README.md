@@ -89,8 +89,27 @@ Após a instalação e execução dos containers, o monitoramento será iniciado
 ## Observações
 
 * Certifique-se de que o arquivo `usuarios.json` esteja formatado corretamente. Erros de formatação podem impedir o funcionamento do sistema.
-* Para modificar variaveis de ambiente, edite o arquivo docker-compose.yml
-* Caso precise persistir dados, certifique-se que os volumes do docker-compose.yml estejam configurados corretamente.
+* Para modificar variaveis de ambiente, edite o arquivo `docker-compose.yml`.
+* Caso precise persistir dados, certifique-se de que os volumes do `docker-compose.yml` estejam configurados corretamente.
+* O sistema de notificação utiliza o serviço Brevo (anteriormente Sendinblue) para enviar e-mails. No entanto, você é livre para escolher qualquer serviço de e-mail de sua preferência. Se você optar por utilizar o Brevo, será necessário configurar as seguintes variáveis de ambiente no arquivo `docker-compose.yml`:
+    * `EMAIL_REMETENTE`: O endereço de e-mail que será usado para enviar as notificações.
+    * `API_KEY`: A chave de API do Brevo para autenticação.
+
+    Exemplo de configuração no `docker-compose.yml`:
+
+    ```yaml
+    version: '3.9'
+    services:
+      app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: consulta_processo        
+        environment:
+          EMAIL_REMETENTE: seu-email@exemplo.com
+          API_KEY: sua-api-key-brevo
+        # ... outras configurações ...
+    ```
 
 ## Pré-requisitos
 
