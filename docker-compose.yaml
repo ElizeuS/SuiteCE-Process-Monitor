@@ -10,3 +10,4 @@ services:
     environment:
       API_KEY: ''
       PATH_ROTINAS: /processos/rotinas
+      EMAIL_REMETENTE: ''
