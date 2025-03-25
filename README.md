@@ -13,7 +13,7 @@ Este projeto é executado dentro de um container Docker. Para iniciar o monitora
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [https://github.com/ElizeuS/SuiteCE-Process-Monitor.git](https://github.com/ElizeuS/SuiteCE-Process-Monitor.git)
+    git clone https://github.com/ElizeuS/SuiteCE-Process-Monitor.git
     cd SuiteCE-Process-Monitor/
     ```
 
