@@ -8,6 +8,7 @@ def carregar_variaveis_ambiente(caminho_arquivo=".env"):
     if os.path.exists(caminho_arquivo):
         load_dotenv(dotenv_path=caminho_arquivo)
     else:
+        load_dotenv()
         print(f"Arquivo .env não encontrado em: {caminho_arquivo}. Usando variáveis do ambiente.")
 
 # Função para converter datetime em string
