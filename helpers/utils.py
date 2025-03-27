@@ -44,7 +44,6 @@ def gerencia_pasta_processo(path_processo, conteudo_serializado):
         print(f"Pasta '{path_processo}' já existe.")
     
     # Caminho do arquivo processo.json
-    print(path_processo, 333)
     path_arquivo = os.path.join(path_processo, "processo.json")
     
     # Chama a função para salvar o conteúdo se houver diferenças
