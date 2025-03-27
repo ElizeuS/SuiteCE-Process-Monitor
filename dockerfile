@@ -10,17 +10,7 @@ WORKDIR /app
 RUN mkdir processos/
 RUN mkdir processos/rotinas/
 
-COPY .env /app/
-COPY usuarios.json /app/
-COPY constants /app/constants
-COPY helpers /app/helpers
-COPY requirements.txt /app/
-COPY entrypoint.sh /app/
-COPY start.sh /app/
-COPY consulta_processo.py /app/
-COPY main.py /app/
-COPY consulta_processo.py /app/ 
-COPY notifica.py /app/
+COPY . /app/
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN playwright install
