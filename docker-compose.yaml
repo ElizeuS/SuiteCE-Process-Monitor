@@ -7,7 +7,3 @@ services:
     container_name: consulta_processo
     stdin_open: true
     tty: true
-    environment:
-      API_KEY: ''
-      PATH_ROTINAS: /processos/rotinas
-      EMAIL_REMETENTE: ''
